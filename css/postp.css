@@ -1,0 +1,13 @@
+@font-face{
+	src:url("../fonts/arcade_classic_pizz/ARCADECLASSIC.TTF");
+	font-family:"ArcadeClassic";
+}
+
+body,html{height: 100%;}
+body{overflow-x:hidden;font-size:16px;font-family: "ArcadeClassic";}
+div.parentmeme{margin:1em;border:1px dashed black;position: relative;top:0;left:0;width:100%;}
+div.parentmeme div.c_memes{width:100%;min-height:560px;padding:0;left:0;}
+div.c_memes #carousel_memes{width:100%;min-height:inherit;}
+div.c_memes #carousel_memes .carousel-inner{min-height: inherit;}
+div.c_memes #carousel_memes .carousel-inner .item{width:33.33%;min-height: inherit;}
+div.c_memes #carousel_memes .carousel-inner .item figure img{width:48%;min-height:100%;display: inline-block;}

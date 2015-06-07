@@ -1,0 +1,10 @@
+@font-face{
+	src:url("../fonts/arcade_classic_pizz/ARCADECLASSIC.TTF");
+	font-family:"ArcadeClassic";
+}
+
+body{overflow-x:hidden;font-size:16px;font-family: "ArcadeClassic";background-color: black;}
+
+div.content{display: flex;flex-wrap:wrap;}
+div.content figure.pict{width:220px;min-height:220px;}
+div.content figure.pict img{width:100%;height:100%;}

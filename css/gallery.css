@@ -1,0 +1,15 @@
+@font-face{
+	src:url("../fonts/arcade_classic_pizz/ARCADECLASSIC.TTF");
+	font-family:"ArcadeClassic";
+}
+
+body{font-size: 16px;overflow-x:hidden;font-family: "ArcadeClassic";}
+
+header.header_gallery{position: fixed;top:0;left:0;height:5em;width:100%;text-align: center;background-color: white;box-shadow:2px 2px 8px black;z-index:25;}
+
+section.section_gallery{margin-top:7em;z-index:-15;}
+section.section_gallery div.row{margin-bottom:3em;}
+section.section_gallery div.row div.meme{display: inline-block;height:160px;margin-bottom:1em;}
+
+section div.row div.meme figure.col-md-12{display: inline-block;max-width:160px;text-align: center;}
+section div.row div.meme figure.col-md-12 img{height: 100%;width:100%;}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="katmMod">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Una galeria completa de todos los memes que generamos.">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Galeria de memes</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/gallery.css">
+	<link rel="shortcut icon" href="css/TrollFace.ico">
+</head>
+<body ng-controller="katmG">
+	<header class="header_gallery">
+		<h1>Galeria de memes</h1>
+	</header>
+
+	<section class="container section_gallery">
+			<div class="row" ng-repeat="j in douplets">
+					<div class="meme col-md-5" ng-repeat="rowImg in j">
+						<figure class="col-md-12">
+							<img src={{rowImg.url}} alt="Meme glitched">
+							<a href><p>Ver link</p></a>
+						</figure>
+					</div>
+					<div class="col-md-1"></div>
+
+			</div>
+	</section>
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -2,7 +2,7 @@ var m = angular.module("katmMod",[]);
 m.controller("katmC",function($scope,$http){
 	$scope.imgs = [];
 
-	$http.get("http://localhost:8000/js/jsondata.json")
+	$http.get("http://drivalegre.github.io/KillAllTheMemes/js/jsondata.json")
 	.success(function(data){
 		$scope.imgs = data;
 	})
@@ -14,7 +14,7 @@ m.controller("katmC",function($scope,$http){
 m.controller("katmG",function($scope,$http){
 	$scope.douplets = [];
 	// Comment
-	$http.get("http://localhost:8000/js/jsondata.json")
+	$http.get("http://drivalegre.github.io/KillAllTheMemes/js/jsondata.json")
 	.success(function(data){
 		var a = data;
 		var douplet = [];

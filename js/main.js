@@ -1,39 +1,26 @@
-var m = angular.module("katmMod",[]);
-m.controller("katmC",function($scope,$http){
+var m = angular.module("katmMod",["localStorageModule"])
+.controller("katmC",function($scope,$http,localStorageService){
 	$scope.imgs = [];
+	$scope.actualImgs = [];
+	$scope.initial = 0;
+	$scope.finale = 35;
 
-	$http.get("http://drivalegre.github.io/KillAllTheMemes/js/jsondata.json")
-	.success(function(data){
-		$scope.imgs = data;
-	})
-	.error(function(err){
-		console.log(err);
-	});
-});
-// Add comment
+	if(localStorageService.get("imgs")){
+		$scope.imgs = localStorageService.get("imgs");
+	}
+	else{
+		$http.get("http://drivalegre.github.io/KillAllTheMemes/js/jsondata.json")
+		.success(function(data){
+			$scope.imgs = data;
+			localStorageService.set("imgs",$scope.imgs);
+		})
+		.error(function(err){
+			console.log(err);
+		});
+	}
 
-m.controller("katmG",function($scope,$http){
-	$scope.douplets = [];
-	// Comment
-	$http.get("http://drivalegre.github.io/KillAllTheMemes/js/jsondata.json")
-	.success(function(data){
-		var a = data;
-		var douplet = [];
-
-		for (var i = 0; i < a.length; i++) {
-			if(douplet.length == 2)
-			{
-				$scope.douplets.push(douplet);
-				douplet = [];
-			}
-			if(a[i].url.indexOf("opt") != -1)
-			{
-				var img = {"url":a[i].url};
-				douplet.push(img);
-			}
-		}
-	})
-	.error(function(err){
-		console.log(err);
-	});
+	// Va a tener un comportamiento rarisimo
+	$scope.actualImgs = $scope.imgs.slice($scope.initial,$scope.finale);
+	$scope.initial += 30;
+	$scope.finale += 30;
 });

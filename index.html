@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" ng-app="katmMod">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Grid presentation</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="shortcut icon" href="css/TrollFace.ico">
 </head>
-<body>
-	<script>
-		// Comment
-		document.location = "http://drivalegre.github.io/KillAllTheMemes/gallery.html";
-	</script>
+<body ng-controller="katmC">
+	<header class="header_gallery">
+		<h1>Galeria de memes</h1>
+	</header>
+	<div class="content container">
+			<figure class="pict" ng-repeat="i in imgs">
+				<img src={{i.url}} alt="Meme">
+			</figure>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

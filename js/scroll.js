@@ -7,6 +7,7 @@ window.addEventListener("scroll",function(){
 	//var scroll_size = scrollSize();
 	console.log("Info:\nScroll bar: " + scroll + "\nmaxScroll: " + maxScroll);
 
+	// Corregir el reScrolling 
 	// Posiblemente haya que calcular el maxScroll para encontrar el tope y no calcularlo con el scroll_size
     if(scroll == maxScroll){
 		var imgNs = JSON.parse("[" + localStorage.getItem("ls.imgs") + "]")[0];

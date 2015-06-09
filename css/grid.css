@@ -1,8 +1,5 @@
-@font-face{
-	src:url("../fonts/arcade_classic_pizz/ARCADECLASSIC.TTF");
-	font-family:"ArcadeClassic";
-}
-
+@font-face{src:url("../fonts/arcade_classic_pizz/ARCADECLASSIC.TTF");font-family:"ArcadeClassic";}
+/* Add two breakpoints to media queries and a margin:auto for margin dinamic in section*/
 body{overflow-x:hidden;font-size:16px;font-family: "ArcadeClassic";background-color: black;}
 header.header_gallery{padding:1em;position:absolute;top:0;left:0;height:8em;width:100%;text-align: center;background-color: rgb(0,0,0);box-shadow:2px 2px 8px black;z-index:25;}
 header.header_gallery img{height: 70%; width: 70%;}

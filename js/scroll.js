@@ -21,8 +21,14 @@ window.addEventListener("scroll",function(){
 		   	/*getSocialButtons(node);*/
 		   	sectionmain.appendChild(node);
 		}
-		initial += 70;
-		finale += 70;
+		if(finale > imgNs.length - 20){
+			initial += 0;
+			finale += 29;
+		}
+		else{
+			initial += 70;
+			finale += 70;
+		}
     }
     else if(scroll > maxScroll){
     	maxScroll = scroll;

@@ -33,7 +33,7 @@ var scrollSize = function(){
 }
 
 
-var getSocialButtons(elem){
+function getSocialButtons(elem){
 	var social = document.createElement("div");
 	social.className = "social";
 	social.innerHTML = "<div class='facebook'>

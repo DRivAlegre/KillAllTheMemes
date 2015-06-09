@@ -1,12 +1,14 @@
 var initial = 30;
 var finale = 59;
+var maxScroll = -1;
 
 window.addEventListener("scroll",function(){
 	var scroll = scroller();
-	var scroll_size = scrollSize();
+	//var scroll_size = scrollSize();
 	console.log("Info:\nScroll bar: " + scroll + "\nScroll size: " + scroll_size);
 
-    if(scroll > (scroll_size - 500)){
+	// Posiblemente haya que calcular el maxScroll para encontrar el tope y no calcularlo con el scroll_size
+    if(scroll == maxScroll){
 		var imgNs = JSON.parse("[" + localStorage.getItem("ls.imgs") + "]")[0];
 		var sectionmain = document.getElementsByClassName("content")[0];
 		for(var j = initial;j < finale;j++){
@@ -20,7 +22,10 @@ window.addEventListener("scroll",function(){
 		}
 		initial += 70;
 		finale += 70;
-    } 
+    }
+    else{
+    	maxScroll = scroll;
+    }
 });
 
 var scroller = function(){

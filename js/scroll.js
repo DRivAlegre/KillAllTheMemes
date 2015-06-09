@@ -1,11 +1,10 @@
 window.addEventListener("scroll",function(){
-	
+	var scroll = getData.scroll();
+	var scroll_size = getData.scrollSize();
 
     if(scroll > scroll_size){
-        // Codigo para mostrar menu
-    } else {
-        // Codigo para ocultar el menu
-    }
+        // Linkea el evento scroll con $scope.getMorePages() y dibujalo en la pagina con append
+    } 
 });
 
 var getData = {

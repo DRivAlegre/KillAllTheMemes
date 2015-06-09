@@ -21,7 +21,8 @@ angular.module("katmMod",["localStorageModule"])
 	}
 
 	// Va a tener un comportamiento rarisimo
-	$scope.actualImgs = $scope.imgs.slice($scope.initial,$scope.finale);
+	var ims = $scope.imgs;
+	$scope.actualImgs = ims.slice($scope.initial,$scope.finale);
 	$scope.initial += 30;
 	$scope.finale += 30;
 });

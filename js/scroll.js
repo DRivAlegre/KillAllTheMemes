@@ -4,6 +4,7 @@ window.addEventListener("scroll",function(){
 
     if(scroll > scroll_size){
         // Linkea el evento scroll con $scope.getMorePages() y dibujalo en la pagina con append
+    	$scope.getMorePages();
     } 
 });
 

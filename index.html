@@ -16,7 +16,7 @@
 		<div><span><a href="http://fyslab.net/killallthememes/">Informacion</a></span></div>
 	</header>
 	<div class="content container">
-			<figure class="pict" ng-repeat="i in actualImgs">
+			<figure class="pict" ng-repeat="i in imgs">
 				<img src={{i.url}} alt="Meme">
 				<!-- <div class="social">
 					<div class="facebook">
@@ -34,6 +34,7 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-local-storage.min.js"></script>
 	<script src="js/main.js"></script>
+
 <!--	<script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;

@@ -1,9 +1,9 @@
 angular.module("katmMod",["localStorageModule"])
 .controller("katmC",function(localStorageService,$http,$scope){
 	$scope.imgs = [];
-	$scope.actualImgs = [];
+/*	$scope.actualImgs = [];
 	$scope.initial = 0;
-	$scope.finale = 35;
+	$scope.finale = 35;*/
 
 	// A comment
 	if(localStorageService.get("imgs")){
@@ -21,8 +21,8 @@ angular.module("katmMod",["localStorageModule"])
 	}
 
 	// Va a tener un comportamiento rarisimo
-	var ims = $scope.imgs;
+/*	var ims = $scope.imgs;
 	$scope.actualImgs = ims.slice($scope.initial,$scope.finale);
 	$scope.initial += 30;
-	$scope.finale += 30;
+	$scope.finale += 30;*/
 });

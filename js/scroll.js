@@ -36,11 +36,6 @@ var scrollSize = function(){
 function getSocialButtons(elem){
 	var social = document.createElement("div");
 	social.className = "social";
-	social.innerHTML = "<div class='facebook'>
-						<div id='fb-root'></div>
-						<div class='fb-like' data-href='https://drivalegre.github.io/KillAllTheMemes' data-layout='button' data-action='like' data-show-faces='false' data-share='true'></div>
-					<div class='twitter'>
-						<a href='https://twitter.com/share' class='twitter-share-button' data-url='http://drivalegre.github.io/KillAllTheMemes' data-text='http://fyslab.net/killallthememes' data-related='killallthememes' data-count='none' data-hashtags='KillAllTheMemes'>Tweet</a>
-					</div>";
+	social.innerHTML = "<div class='facebook'><div id='fb-root'></div><div class='fb-like' data-href='https://drivalegre.github.io/KillAllTheMemes' data-layout='button' data-action='like' data-show-faces='false' data-share='true'></div><div class='twitter'><a href='https://twitter.com/share' class='twitter-share-button' data-url='http://drivalegre.github.io/KillAllTheMemes' data-text='http://fyslab.net/killallthememes' data-related='killallthememes' data-count='none' data-hashtags='KillAllTheMemes'>Tweet</a></div>";
 	elem.appendChild(social);
 }

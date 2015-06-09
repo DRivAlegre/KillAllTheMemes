@@ -23,7 +23,7 @@ window.addEventListener("scroll",function(){
 		initial += 70;
 		finale += 70;
     }
-    else{
+    else if(scroll > maxScroll){
     	maxScroll = scroll;
     }
 });

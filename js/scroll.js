@@ -5,7 +5,7 @@ var maxScroll = -1;
 window.addEventListener("scroll",function(){
 	var scroll = scroller();
 	//var scroll_size = scrollSize();
-	console.log("Info:\nScroll bar: " + scroll + "\nScroll size: " + scroll_size);
+	console.log("Info:\nScroll bar: " + scroll + "\nmaxScroll: " + maxScroll);
 
 	// Posiblemente haya que calcular el maxScroll para encontrar el tope y no calcularlo con el scroll_size
     if(scroll == maxScroll){

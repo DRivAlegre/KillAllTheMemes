@@ -34,7 +34,7 @@ angular.module("katmMod",["LocalStorageModule"])
 
 	//
 
-	window.addEventListener("scroll",function(){
+	/*window.addEventListener("scroll",function(){
 	var scroll = getData.scroll();
 	var scroll_size = getData.scrollSize();
 
@@ -53,6 +53,6 @@ angular.module("katmMod",["LocalStorageModule"])
 	    var element = document.getElementByTagName("body");
 	    var scroll_size = element.offsetHeight || element.style.pixelHeight;
 	    return scroll_size;
-	}
-}
+		}
+	}*/
 });

@@ -4,6 +4,7 @@ var finale = 59;
 window.addEventListener("scroll",function(){
 	var scroll = scroller();
 	var scroll_size = scrollSize();
+	console.log("Info:\nScroll bar: " + scroll + "\nScroll size: " + scroll_size);
 
     if(scroll > (scroll_size - 500)){
 		var imgNs = JSON.parse("[" + localStorage.getItem("ls.imgs") + "]")[0];

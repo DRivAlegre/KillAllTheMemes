@@ -5,7 +5,7 @@ var maxScroll = -1;
 window.addEventListener("scroll",function(){
 	var scroll = scroller();
 	//var scroll_size = scrollSize();
-	console.log("Info:\nScroll bar: " + scroll + "\nmaxScroll: " + maxScroll);
+	/*console.log("Info:\nScroll bar: " + scroll + "\nmaxScroll: " + maxScroll);*/
 
 	// Corregir el reScrolling 
     if(scroll == maxScroll){
@@ -20,14 +20,8 @@ window.addEventListener("scroll",function(){
 		   	getSocialButtons(node);
 		   	sectionmain.appendChild(node);
 		}
-		if(finale > imgNs.length - 20){
-			initial += 0;
-			finale += 29;
-		}
-		else{
-			initial += 70;
-			finale += 70;
-		}
+		initial += 70;
+		finale += 70;
     }
     else if(scroll > maxScroll){
     	maxScroll = scroll;

@@ -8,7 +8,6 @@ window.addEventListener("scroll",function(){
 	console.log("Info:\nScroll bar: " + scroll + "\nmaxScroll: " + maxScroll);
 
 	// Corregir el reScrolling 
-	// Posiblemente haya que calcular el maxScroll para encontrar el tope y no calcularlo con el scroll_size
     if(scroll == maxScroll){
 		var imgNs = JSON.parse("[" + localStorage.getItem("ls.imgs") + "]")[0];
 		var sectionmain = document.getElementsByClassName("content")[0];
@@ -18,7 +17,7 @@ window.addEventListener("scroll",function(){
 		   	var img_img = document.createElement("img");
 		   	img_img.src = imgNs[j].url;
 		   	node.appendChild(img_img);
-		   	/*getSocialButtons(node);*/
+		   	getSocialButtons(node);
 		   	sectionmain.appendChild(node);
 		}
 		if(finale > imgNs.length - 20){
@@ -46,9 +45,9 @@ var scrollSize = function(){
 }
 
 
-/*function getSocialButtons(elem){
+function getSocialButtons(elem){
 	var social = document.createElement("div");
 	social.className = "social";
 	social.innerHTML = "<div class='facebook'><div id='fb-root'></div><div class='fb-like' data-href='https://drivalegre.github.io/KillAllTheMemes' data-layout='button' data-action='like' data-show-faces='false' data-share='true'></div><div class='twitter'><a href='https://twitter.com/share' class='twitter-share-button' data-url='http://drivalegre.github.io/KillAllTheMemes' data-text='http://fyslab.net/killallthememes' data-related='killallthememes' data-count='none' data-hashtags='KillAllTheMemes'>Tweet</a></div>";
 	elem.appendChild(social);
-}*/
+}

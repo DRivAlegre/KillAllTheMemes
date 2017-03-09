@@ -8,7 +8,7 @@ angular.module("katmMod",["LocalStorageModule"])
 		$scope.imgs = localStorageService.get("imgs");
 	}
 	else{
-		$http.get("http://drivalegre.github.io/KillAllTheMemes/js/jsondata.json")
+		$http.get("http://david-rivero.github.io/KillAllTheMemes/js/jsondata.json")
 		.success(function(data){
 			$scope.imgs = data;
 			localStorageService.set("imgs",$scope.imgs);
